@@ -1,0 +1,89 @@
+{
+    "city": "Istanbul",
+    "dates": [
+
+        { "date": "2025-12-30",
+          "temp" : 5 ,
+          "feels_like": -1,
+          "high": 12 ,
+          "low": 5 ,
+          "precip": 0,
+          "weather":"Cloudy/Rainy"
+        },
+
+        { "date": "2025-12-31",
+          "temp" : 2,
+          "feels_like": -6,
+          "high": 5,
+          "low": 0 ,
+          "precip": 70,
+          "weather":"Rainy"
+        },
+
+        { "date": "2026-01-01",
+          "temp" : 2 ,
+          "feels_like": -9,
+          "high": 3,
+          "low": -2 ,
+          "precip": 0,
+          "weather":"Sunny"
+        },
+
+        { "date": "2026-01-02",
+          "temp" : 1 ,
+          "feels_like": -6,
+          "high": 8,
+          "low": 1 ,
+          "precip": 0,
+          "weather":"Windy"
+        },
+        { "date": "2026-01-03",
+          "temp" : 4 ,
+          "feels_like": -1,
+          "high": 13,
+          "low": 3 ,
+          "precip": 30,
+          "weather":"Cloudy"
+        },
+        { "date": "2026-01-04",
+          "temp" : 8 ,
+          "feels_like": 4,
+          "high": 15,
+          "low": 7 ,
+          "precip": 0,
+          "weather":"Windy"
+        },
+        { "date": "2026-01-05",
+          "temp" : 9 ,
+          "feels_like": 6,
+          "high": 14,
+          "low": 9 ,
+          "precip": 0,
+          "weather":"Cloudy"
+        },
+        { "date": "2026-01-06",
+          "temp" : 11,
+          "feels_like": 7,
+          "high": 11,
+          "low": 7,
+          "precip": 45,
+          "weather":"Rainy"
+        },
+        { "date": "2026-01-07",
+          "temp" : 10 ,
+          "feels_like": 5,
+          "high": 10,
+          "low": 3 ,
+          "precip": 60,
+          "weather":"Rainy"
+        },
+        { "date": "2026-01-08",
+          "temp" : 4,
+          "feels_like": 0,
+          "high": 7,
+          "low": 0 ,
+          "precip": 65,
+          "weather":"Rainy"
+        }
+    ]
+}
