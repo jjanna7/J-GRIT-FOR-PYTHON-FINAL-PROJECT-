@@ -18,6 +18,7 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+
  This project was developed as a complete pipeline including:
   
   - Data ingestion (JSON)
@@ -64,8 +65,11 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+
   1. Data Ingestion
+  
   This project loads weather data from two sources:
+
 
   A.JSON File(Primary Dataset)
 
@@ -93,6 +97,8 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+
+
   2. Data Cleaning 
 
   Cleaning is performed in stats.py:
@@ -101,6 +107,8 @@ J-GRIT FOR PYTHON FINAL PROJECT
   - Convert dates into datetime objects
   - Forward-fill & backward-fill missing values 
   - Standardize dataset for analysis and visualization 
+
+
 
 
 
@@ -117,6 +125,8 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+
+
   4. Anomaly Detection 
 
   Uses Z-score to identify unusual temperature values:
@@ -124,6 +134,8 @@ J-GRIT FOR PYTHON FINAL PROJECT
   - if Z > 2 -> anomaly detected
   - if none present -> prints:
      " No temperature anomalies detected."
+
+
 
 
 
@@ -135,25 +147,30 @@ J-GRIT FOR PYTHON FINAL PROJECT
     
   smooth color-gradient line showing temperature change over 10 days.
 
+
   ### High/Low Temperatures
   ![High/Low Temperatures](analysis/high_low_temps.png)
 
   Daily high and low temperature comparison.
+
 
   ### Weather Conditions Frequency 
   ![ Weather Conditions Frequency](analysis/weather_conditions.png)
 
   Bar chart counting how many times each condition occurred.
   
+
   ### Feels-like vs Actual Temperature 
   ![Feels-like vs Actual Temperature ](/analysis/feels_like.png)
 
   Comparison of perception vs real measurement.
 
+
   ### Correlation Heatmap 
   ![Correlation Heatmap](analysis/correlation_heatmap.png)
 
   Seaborn heatmap showing relationships between all variables.
+
 
   ### Boxplots
   ![Boxplots](analysis/boxplots.png)
@@ -162,7 +179,10 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+
   6. Web Scraping
+
+
 
   scrape_weather.py performs real-time scraping:
 
@@ -181,9 +201,13 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+
+
    7. Requirements
     
    - pip install pandas matplotlib seaborn requests
+
+
 
 
 
@@ -215,8 +239,12 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+
+
   9. License
    MIT license
+
+
 
 
 
@@ -238,6 +266,8 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+
+
   11. Technologies Used
   - Python 3
   - Pandas (data manipulation)
@@ -245,6 +275,8 @@ J-GRIT FOR PYTHON FINAL PROJECT
   - Seaborn (advanced visualization)
   - Requests (API / web scraping)
   
+
+
 
   12. Conclusion
    This project turns real weather data into clear insights through a simple, modular pipeline-cleaning, analysis,
