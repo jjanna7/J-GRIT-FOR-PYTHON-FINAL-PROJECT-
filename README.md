@@ -193,6 +193,11 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+  ### Precipitation
+  ![Daily Precipitation](analysis/precipitation.png)
+
+  Daily precipitation levels measured in millimeters over the selected period.
+
 
 
 
