@@ -1,12 +1,32 @@
 # plots module
+import seaborn as sns
 import matplotlib.pyplot as plt
 
+def plot_feels_like(df):
+    """Plot feels-like temperature trend."""
+    df= df.sort_values("date")
+
+    plt.figure(figsize=(10,5))
+    plt.plot(df["date"], df["temp"], marker="o",label="Actual Temp(°C) " ,linewidth=2)
+    plt.plot(df["date"], df["feels_like"], marker="o", label="Feels Like(°C)",linewidth=2, linestyle="--")
+
+    plt.title("Actual vs Feels-like Temperature (Istanbul)",fontsize=14, fontweight="bold")
+    plt.xlabel("Date")
+    plt.ylabel("Temperature (°C)")
+    plt.grid(True, linestyle="--", alpha=0.6)
+    plt.xticks(rotation=45)
+
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig("analysis/feels_like.png")
+    plt.close()
+
+        
 def plot_temperature(df):
     """Plot a professional temperature trend graph."""
     df= df.sort_values("date")
 
     plt.figure(figsize=(11, 5))
-
     sunset_colors=["#FFD700","#FFA500","#FF4500"]
 
     for i in range(len(df)-1):
@@ -51,13 +71,9 @@ def plot_precipitation(df):
         plt.ylabel("Precipitation (mm)")
         plt.grid(True, linestyle='--', alpha=0.5)
         plt.xticks(rotation=45)
+
         plt.tight_layout()
         plt.savefig("analysis/precipitation.png")
-        plt.close()
-        plt.xlabel("Date")
-        plt.grid(True, linestyle='--', alpha=0.5)
-        plt.xticks(rotation=45)
-        plt.tight_layout()
         plt.close()
         
 def plot_high_low(df):
@@ -85,6 +101,8 @@ def plot_high_low(df):
             plt.grid(True, linestyle='--', alpha=0.5)
             plt.xticks(rotation=45)
             plt.tight_layout()
+            plt.legend()
+
             plt.savefig("analysis/high_low_temps.png")
             plt.close()
 
@@ -103,13 +121,40 @@ def plot_weather_frequency(df):
                 plt.xlabel("Weather Type")
                 plt.ylabel("Count")
                 plt.grid(axis='y', linestyle='--', alpha=0.4)
+
                 plt.tight_layout()
                 plt.savefig("analysis/weather_conditions.png")
                 plt.close()
+
+def plot_correlation_heatmap(df):
+                """Correlation heatmap ."""
+                numeric_df= df[["temp","low","high","precip","feels_like" ]]
+
+                plt.figure(figsize=(8,6))
+                sns.heatmap(numeric_df.corr(), annot=True ,cmap="coolwarm",fmt=".2f")
+                plt.title("Correlation Heatmap of Weather Variables",fontsize=14, fontweight="bold")
+                plt.tight_layout()
+                plt.savefig("analysis/correlation_heatmap.png")
+                plt.close()
+
+def plot_boxplots(df):
+               """Boxplots for advanced statistical analysis."""
+               plt.figure(figsize=(10,6))
+               df[["temp","low","high","precip","feels_like" ]].plot.box()
+
+               plt.title("Box Plot of Weather Variables",fontsize=14,fontweight='bold')
+               plt.tight_layout()
+               plt.savefig("analysis/boxplots.png")
+               plt.close()
+
 
 def plot_all_weather(df):
                     """Generate all weather plots."""
                     plot_temperature(df)
                     plot_precipitation(df)
-                    plot_high_low(df)
                     plot_weather_frequency(df)
+                    plot_high_low(df)
+                    plot_feels_like(df)
+                    plot_correlation_heatmap(df)
+                    plot_boxplots(df)
+                    

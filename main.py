@@ -1,5 +1,6 @@
 from analysis.stats import clean_weather_data, analyze_weather
 from analysis.plots import plot_all_weather
+from analysis.stats import detect_anomalies
 import json
 import pandas as pd
 import requests
@@ -80,6 +81,9 @@ def main():
     stats= analyze_weather(df)
     clean_stats={k:float(v)for k,v in stats.items()}
     print(clean_stats)
+    
+    print("\nRunning anomaly detection...")
+    detect_anomalies(df)
     
     print("\nCreating weather plots...")
     plot_all_weather(df)
