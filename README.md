@@ -66,6 +66,10 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+
+
+
+
   1. Data Ingestion
   
   This project loads weather data from two sources:
@@ -99,6 +103,9 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+
+
+
   2. Data Cleaning 
 
   Cleaning is performed in stats.py:
@@ -107,6 +114,8 @@ J-GRIT FOR PYTHON FINAL PROJECT
   - Convert dates into datetime objects
   - Forward-fill & backward-fill missing values 
   - Standardize dataset for analysis and visualization 
+
+
 
 
 
@@ -127,6 +136,8 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+
+
   4. Anomaly Detection 
 
   Uses Z-score to identify unusual temperature values:
@@ -134,6 +145,9 @@ J-GRIT FOR PYTHON FINAL PROJECT
   - if Z > 2 -> anomaly detected
   - if none present -> prints:
      " No temperature anomalies detected."
+
+
+
 
 
 
@@ -180,6 +194,9 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+
+
+
   6. Web Scraping
 
 
@@ -203,9 +220,16 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+
+
+
    7. Requirements
     
    - pip install pandas matplotlib seaborn requests
+
+
+
+
 
 
 
@@ -241,8 +265,15 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+
+
   9. License
    MIT license
+
+
+
+
+
 
 
 
@@ -268,6 +299,11 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
 
 
+
+
+
+
+
   11. Technologies Used
   - Python 3
   - Pandas (data manipulation)
@@ -275,6 +311,9 @@ J-GRIT FOR PYTHON FINAL PROJECT
   - Seaborn (advanced visualization)
   - Requests (API / web scraping)
   
+
+
+
 
 
 
