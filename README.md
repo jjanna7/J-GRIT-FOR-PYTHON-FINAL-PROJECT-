@@ -1,6 +1,8 @@
 J-GRIT FOR PYTHON FINAL PROJECT
  PROJECT TITLE :
- ☁️ (Weather Data Analysis & Visualization)
+
+
+  ☁️ (Weather Data Analysis & Visualization)
 
  This project uses a real-world weather dataset manually collected from Apple Weather for Istanbul between 30 December 2025 and 08 January 2026.
 
