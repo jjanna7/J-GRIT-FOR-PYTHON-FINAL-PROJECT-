@@ -36,9 +36,9 @@ def convert_to_dataframe(data):
 
 
     if "weather" in data:
-        dailly_list=data["weather"]
+        daily_list=data["weather"]
 
-        for day in dailly_list:
+        for day in daily_list:
             rows.append({
                 "date": day.get("date"),
                 "temp": float(day["avgtempC"]),
@@ -79,7 +79,7 @@ def main():
 
     print("\nAnalyzing weather data...")
     stats= analyze_weather(df)
-    clean_stats={k:float(v)for k,v in stats.items()}
+    clean_stats={k: float(v) for k,v in stats.items()}
     print(clean_stats)
     
     print("\nRunning anomaly detection...")
