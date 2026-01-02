@@ -29,11 +29,13 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
  
   
+  ### 📂 Project Structure 
+  ```
   J-GRIT-FOR-PYTHON-FINAL-PROJECT-
   |
   |--analysis/
   |   |---__init__.py
-  |   --- boxplots.png -> Statistical distribution / outliers (boxplot)
+  |   |--- boxplots.png -> Statistical distribution / outliers (boxplot)
   |   |--- correlation_heatmap.png -> Variable correlations(heatmap)
   |   |--- feels_like.png -> Actual vs feels-like temperature
   |   |--- high_low_temps.png -> Daily high & low temperatures
@@ -45,8 +47,8 @@ J-GRIT FOR PYTHON FINAL PROJECT
   |
   |
   |---data/
-  |     |---raw_weather.json    -> Provided dataset
-  |     |---scraped_weather.csv -> Live scraped weather (WTTR API)
+  |   |---raw_weather.json    -> Provided dataset
+  |   |---scraped_weather.csv -> Live scraped weather (WTTR API)
   |
   |
   |---- .gitignore        -> Ignored files & folders
@@ -126,32 +128,32 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
   All plots saved inside analysis/: 
   ### Temperature Trend 
-  [Temperature Trend](analysis/temp_trend.png)
+  ![Temperature Trend](analysis/temp_trend.png)
     
   smooth color-gradient line showing temperature change over 10 days.
 
   ### High/Low Temperatures
-  [High/Low Temperatures](analysis/high_low_temps.png)
+  ![High/Low Temperatures](analysis/high_low_temps.png)
 
   Daily high and low temperature comparison.
 
   ### Weather Conditions Frequency 
-  [ Weather Conditions Frequency](analysis/weather_conditions.png)
+  ![ Weather Conditions Frequency](analysis/weather_conditions.png)
 
   Bar chart counting how many times each condition occurred.
   
   ### Feels-like vs Actual Temperature 
-  [Feels-like vs Actual Temperature ](/analysis/feels_like.png)
+  ![Feels-like vs Actual Temperature ](/analysis/feels_like.png)
 
   Comparison of perception vs real measurement.
 
   ### Correlation Heatmap 
-  [Correlation Heatmap](analysis/correlation_heatmap.png)
+  ![Correlation Heatmap](analysis/correlation_heatmap.png)
 
   Seaborn heatmap showing relationships between all variables.
 
   ### Boxplots
-  [Boxplots](analysis/boxplots.png)
+  ![Boxplots](analysis/boxplots.png)
 
   Statistical distribution visualized for outliers & spread.
 
@@ -160,6 +162,7 @@ J-GRIT FOR PYTHON FINAL PROJECT
   6. Web Scraping
 
   scrape_weather.py performs real-time scraping:
+
 
   - Extracts temperature , humidity , wind speed , precipitation , condition
   - Prints raw messy data
