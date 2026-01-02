@@ -2,38 +2,54 @@ import requests
 import pandas as pd
 
 def scrape_weather():
-    """Scrape Istanbul weather using WTTR(messy text)."""
+    """Scrape messy WTTR weather data for Istanbul and clean it into a structured dataset."""
 
     url= "https://wttr.in/Istanbul?format=j1"
+    print("Requesting live weather data from WTTR...")
 
     try:
          response=requests.get(url,timeout=10)
          response.raise_for_status()
-    except Exception:
-         print("Failed to fetch weather from WTTR!")
+         data= response.json()
+    except Exception as e:
+         print("\nFailed to fetch weather from WTTR!")
+         print("Error:",e)
          return
-    data=response.json()
-
+    
     today=data["weather"][0]
     hourly=today["hourly"][4]
 
     temp =hourly["tempC"]
+    feels_like=hourly["FeelsLikeC"]
+    wind_speed=hourly["windspeedKmph"]
+    humidity=hourly["humidity"]
     condition=hourly["weatherDesc"][0]["value"]
+    precip=hourly["precipMM"]
 
-    print("RAW SCRAPED DATA:")
-    print("Temp:" , temp,"°C")
+    print("\n==== RAW SCRAPED DATA (MESSY) ====")
+    print("Temperature:" , temp,"°C")
+    print("Feels like:" , feels_like,"°C")
+    print("Humidity:" , humidity,"%")
+    print("Wind Speed:", wind_speed,"km/h")
+    print("Precip(mm):" , precip)
     print("Condition:", condition)
 
-    df=pd.DataFrame({
-        "temp":[float(temp)],
+    df=pd.DataFrame ({
+        "temperature_C":[float(temp)],
+        "feels_like_C":[float(feels_like)],
+        "humidity_%":[float(humidity)],
+        "wind_speed_kmh":[float(wind_speed)],
+        "precip_mm":[float(precip)],
         "condition":[condition]
     })
 
-    print("\nCLEANED DATA:")
-    print(df)
+    print("\n==== CLEANED STRUCTURED DATA ====")
+    print(df,"\n")
 
     df.to_csv("data/scraped_weather.csv",index=False)
+
     print("\nSaved cleaned scraped data -> data/scraped_weather.csv")
+    print("Scraping complete.")
 
 
 if __name__=="__main__":

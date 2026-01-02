@@ -27,9 +27,7 @@ J-GRIT FOR PYTHON FINAL PROJECT
   - Full modular project structure 
 
 
-
-
-  📂 Project Structure 
+ 
   
   J-GRIT-FOR-PYTHON-FINAL-PROJECT-
   |
@@ -56,7 +54,7 @@ J-GRIT FOR PYTHON FINAL PROJECT
   |---- main.py           -> Main analysis pipeline
   |---- README.md         -> Project documentation
   |---- scrape_weather.py -> Web scraping & data cleaning script
-
+  ```
 
 
 
