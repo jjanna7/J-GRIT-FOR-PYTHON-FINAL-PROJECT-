@@ -4,7 +4,8 @@ J-GRIT FOR PYTHON FINAL PROJECT
 
   ☁️ (Weather Data Analysis & Visualization)
 
- This project uses a real-world weather dataset manually collected from Apple Weather for Istanbul between 30 December 2025 and 08 January 2026.
+ This project uses a real-world weather dataset manually collected from Apple Weather for Istanbul between
+  30 December 2025 and 08 January 2026.
 
  Each daily entry (temperature, feels-like, precipitation, high/low, and condition type ) was verified manually to create an accurate and reliable dataset for analysis.
 
